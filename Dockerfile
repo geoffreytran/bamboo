@@ -13,6 +13,8 @@ ADD . /opt/go/src/github.com/QubitProducts/bamboo
 ADD builder/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD builder/run.sh /run.sh
 
+COPY ./etc/haproxy/errors/ /etc/haproxy/errors/
+
 WORKDIR /opt/go/src/github.com/QubitProducts/bamboo
 
 RUN go get github.com/tools/godep && \
