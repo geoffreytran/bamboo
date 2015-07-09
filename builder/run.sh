@@ -11,5 +11,4 @@ do
     perl -p -e 's/\$\{([^}]+)\}/defined $ENV{$1} ? $ENV{$1} : $&/eg' $f > $f
 done
 
-haproxy -f /etc/haproxy/haproxy.cfg -p /var/run/haproxy.pid
 exec /usr/bin/supervisord
