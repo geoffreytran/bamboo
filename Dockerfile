@@ -10,7 +10,7 @@ RUN apt-get install -yqq software-properties-common && \
     rm -rf /var/lib/apt/lists/*
 
 ADD . /opt/go/src/github.com/QubitProducts/bamboo
-ADD builder/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD builder/supervisord.conf.prod /etc/supervisor/conf.d/supervisord.conf
 ADD etc/supervisor/conf.d/haproxy.conf /etc/supervisor/conf.d/haproxy.conf
 ADD etc/supervisor/conf.d/rsyslog.conf /etc/supervisor/conf.d/rsyslog.conf
 ADD builder/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
