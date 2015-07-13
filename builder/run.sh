@@ -4,8 +4,8 @@ sed -i "s/^.*Endpoint\": \"\(http:\/\/haproxy-ip-address:8000\)\".*$/    \"EndPo
     ${CONFIG_PATH:=config/production.example.json}
 fi
 
-# Generate configuration by looping through .dist files in /etc/nginx/conf.d/default.conf
-for f in /etc/haproxy/errors/*.html
+# Replace env variables 
+for f in /etc/haproxy/errors/*.http
 do
     # Replace ${VAR} with variables set in environment.
     perl -p -e 's/\$\{([^}]+)\}/defined $ENV{$1} ? $ENV{$1} : $&/eg' $f > $f
