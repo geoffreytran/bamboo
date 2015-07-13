@@ -1,3 +1,8 @@
+HTTP/1.0 400 Bad request
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -157,19 +162,19 @@
   <body class="plain error-page-wrapper background-color background-image">
     <div class="content-container">
 	<div class="head-line secondary-text-color">
-		403
+		400
 	</div>
 	<div class="subheader primary-text-color">
-		Oops, you need more <br> permission to
-		view this page.
+		Oops, something doesn't appear right
+        with your request
 	</div>
 	<hr>
 	<div class="clearfix"></div>
 	<div class="context primary-text-color">
 		<!-- doesn't use context_content because it's ALWAYS the same thing -->
     <p>
-      You may want to head back to the homepage.<br />
-      If you think something is broken, report a problem.
+        Go back to the previous page and try again.
+        If you think something is broken, report a problem.
     </p>
 	</div>
 	<div class="buttons-container">
@@ -190,7 +195,6 @@
 
     </script>
 
-
-    <!-- Bamboo ${HOSTNAME} on ${HOST} -->
+    <!-- Kubernetes Endpoint Proxy ${HOSTNAME} on ${HOST} -->
   </body>
 </html>

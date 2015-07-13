@@ -157,11 +157,10 @@
   <body class="plain error-page-wrapper background-color background-image">
     <div class="content-container">
 	<div class="head-line secondary-text-color">
-		400
+		408
 	</div>
 	<div class="subheader primary-text-color">
-		Oops, something doesn't appear right
-        with your request
+		Oops, the server took too long to respond.
 	</div>
 	<hr>
 	<div class="clearfix"></div>
@@ -190,6 +189,6 @@
 
     </script>
 
-    <!-- Bamboo ${HOSTNAME} on ${HOST} -->
+    <!-- Kubernetes Endpoint Proxy ${HOSTNAME} on ${HOST} -->
   </body>
 </html>
