@@ -194,6 +194,6 @@ Content-Type: text/html
 
     </script>
 
-    <!-- Bamboo ${HOSTNAME} on ${HOST} -->
+    <!-- Bamboo ${HOSTNAME} -->
   </body>
 </html>
